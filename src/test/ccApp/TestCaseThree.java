@@ -11,17 +11,18 @@ import org.junit.Test;
 import com.Wallet.Wallet;
 import com.ccApp.IPerson;
 import com.ccApp.Person;
+import com.ccApp.cc.Discover;
 import com.ccApp.cc.CreditCard;
 import com.ccApp.cc.MC;
 import com.ccApp.cc.Visa;
 
 public class TestCaseThree {
 	
-	private IPerson person = null;
+	private IPerson personone = null;
 
 	@Before
 	public void doBeforeEachCase() {
-		person = new Person();
+		personone = new Person();
 	}
 	
 	@Test
@@ -42,14 +43,14 @@ public class TestCaseThree {
 		assertTrue("16.0".equals(String.valueOf(personone.getWallet().get(0).getInterestForWallet())));
 
 		
-		/*<<<<<<PERSON 2>>>>>>>>*/
+	/*<<<<<<PERSON 2>>>>>>>>*/
 		Person personTwo = new Person();
-		List<CreditCard> cards = new ArrayList<CreditCard>();
-		cards.add(new Visa().getCreditCard(100));
-		cards.add(new MC().getCreditCard(100));
+		List<CreditCard> cardstwo = new ArrayList<CreditCard>();
+		cardstwo.add(new Visa().getCreditCard(100));
+		cardstwo.add(new MC().getCreditCard(100));
 		List<Wallet> wallets = new ArrayList<Wallet>();
 		Wallet wallet = new Wallet();
-		wallet.setCards(cards);
+		wallet.setCards(cardstwo);
 		wallets.add(wallet);
 		personTwo.setWallet(wallets);
 		double actual =personTwo.CalculateIntrest();
