@@ -1,6 +1,7 @@
 package com.ccApp.cc;
 
 public abstract class CreditCard {
+	/*Using an Abstract Method to satisfy Lsikov Substitution principle*/
 
 	private Integer balance;
 	public Integer getBalance() {
