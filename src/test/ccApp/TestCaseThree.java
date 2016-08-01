@@ -26,8 +26,23 @@ public class TestCaseThree {
 	
 	@Test
 	public void testCaseThree() {
-		TestCaseTwo t=new TestCaseTwo();
-		t.testCaseTwo();
+		/*<<<<<<PERSON 1>>>>>>>>*/
+		personone = new Person();
+		List<CreditCard> cards = new ArrayList<CreditCard>();
+		cards.add(new Visa().getCreditCard(100));
+		cards.add(new Discover().getCreditCard(100));
+		cards.add(new MC().getCreditCard(100));
+		List<Wallet> walletsone = new ArrayList<Wallet>();
+		Wallet walletone = new Wallet();
+		walletone.setCards(cards);
+		walletsone.add(walletone);
+		personone.setWallet(walletsone);
+		double Persononeactual =personone.CalculateIntrest();
+		assertTrue("16.0".equals(String.valueOf(Persononeactual)));
+		assertTrue("16.0".equals(String.valueOf(personone.getWallet().get(0).getInterestForWallet())));
+
+		
+		/*<<<<<<PERSON 2>>>>>>>>*/
 		Person personTwo = new Person();
 		List<CreditCard> cards = new ArrayList<CreditCard>();
 		cards.add(new Visa().getCreditCard(100));
