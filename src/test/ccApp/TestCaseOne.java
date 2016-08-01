@@ -17,6 +17,7 @@ import com.ccApp.cc.MC;
 import com.ccApp.cc.Visa;
 
 public class TestCaseOne {
+	/*Using the Interface object to satisfy DIP principle*/
 	private IPerson person = null;
 
 	@Before
